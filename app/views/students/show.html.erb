@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1><%= @student.name %>'s Clubs</h1>
+</div>
+
+<p>
+  <%= @student.email %>
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Club</th>
+      <th>Leader?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @student.participations.each do |participation| %>
+    <tr>
+      <td><%= link_to participation.club.name, participation.club %></td>
+      <td><%= participation.leader %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

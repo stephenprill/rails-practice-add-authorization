@@ -1,0 +1,20 @@
+<div class="page-header">
+  <h1>Clubs!</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @clubs.each do |club| %>
+    <tr>
+      <td>
+        <%= link_to club.name, club %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
