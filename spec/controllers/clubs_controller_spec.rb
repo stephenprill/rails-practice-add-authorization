@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-  describe  ClubsController do
+  describe ClubsController do
     describe "#index" do
       it "redirects visitor to the login page" do
         get :index
@@ -16,12 +16,6 @@ require 'rails_helper'
         session[:student_id] = student.id
         get :index
         expect(response).to render_template("index")
-
-
-
       end
-
-
-
     end
   end
